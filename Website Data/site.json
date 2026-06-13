@@ -5,7 +5,7 @@
   "email": "landenguth08@gmail.com",
 
   "heroVideo": "https://youtu.be/CbNrWUiBMt4",
-  "heroOverlay": "rgba(0, 0, 0, 0.35)",
+  "heroOverlay": "",
   "heroTitleColor": "#ffffff",
   "heroTaglineColor": "rgba(255, 255, 255, 0.85)",
   "heroScrollColor": "#ffffff",

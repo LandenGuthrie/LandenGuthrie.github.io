@@ -166,10 +166,12 @@ function initSlider() {
     if (locked || Math.abs(e.deltaY) < 10) return;
 
     // if this section's content is taller than the screen, let it
-    // finish scrolling internally before sliding to the next page
+    // finish scrolling internally before sliding to the next page.
+    // the hero is a fixed title screen — never scroll it, always slide;
+    // and ignore tiny sub-pixel overflow so a few stray px can't trap the wheel.
     const sec = sections[index];
     const scroller = sec.querySelector('.section-scroll') || sec;
-    if (scroller.scrollHeight > scroller.clientHeight + 1) {
+    if (sec.id !== 'hero' && scroller.scrollHeight > scroller.clientHeight + 24) {
       const atTop = scroller.scrollTop <= 0;
       const atBottom = scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 1;
       if ((e.deltaY > 0 && !atBottom) || (e.deltaY < 0 && !atTop)) {

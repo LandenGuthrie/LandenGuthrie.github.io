@@ -1,0 +1,51 @@
+{
+  "title": "Tide Drift",
+  "date": "8/9/2025 - 9/30/2025",
+  "thumbnail": "Images/Blog Thumbnails/Tide Drift Thumbnail.png",
+  "description": "A mobile speedboat game where you navigate a randomly generated course that gets faster the longer you play.",
+
+  "content": [
+    { "type": "youtube", "url": "https://youtu.be/uiDY_lftLLk" },
+
+    { "type": "heading", "text": "Pre Production" },
+
+    { "type": "subheading", "text": "Note" },
+    { "type": "text", "text": "Tide Drift was a personal project, started over the summer rather than for school. It's one of my unfinished projects, but it got genuinely far into development, and it's one I may well return to." },
+
+    { "type": "subheading", "text": "Description" },
+    { "type": "text", "text": "Tide Drift is a speedboat game where your speed steadily climbs the longer you survive. You navigate a randomly generated course while dodging obstacles that spawn in the water." },
+    { "type": "text", "text": "It was designed as a mobile game and made strong progress — right up until I started adding AI." },
+
+    { "type": "subheading", "text": "Mechanics" },
+    { "type": "text", "text": "On desktop, A and D steer side to side while the boat accelerates forward automatically." },
+    { "type": "text", "text": "On mobile, the same idea applies — press and hold the side of the screen you want to turn toward." },
+
+    { "type": "subheading", "text": "My Contribution" },
+    { "type": "text", "text": "A solo project, with a small budget for assets like the music." },
+
+    { "type": "heading", "text": "Post Production" },
+
+    { "type": "subheading", "text": "Problems & Failures" },
+    { "type": "text", "text": "Course generation was the big one. It took countless attempts and never fully worked. The file responsible grew past 1,000 lines — for a system that, on paper, generates tiles of water and should fit in 200 or 300. I had to restrict generation to two directions relative to the previous segment (forward and left), because the moment I allowed right and downward turns, the path would cut into itself or loop around and fail to generate." },
+    { "type": "text", "text": "The second major problem arrived at the very end of development: the AI. I made the mistake of training networks with my own machine-learning API. I spent roughly two full weeks refining and training, with nothing to show for it. The API worked fine on smaller, supervised-learning projects like image recognition, but the reinforcement learning this game needed exposed its limits — and with your own API, it's nearly impossible to tell whether the framework or the training is at fault." },
+    { "type": "text", "text": "The terrain was procedural and rendered through a custom shader, which meant no standard lighting and a string of knock-on problems. I also leaned on a geometry shader for a long time before discovering how many devices don't support them, forcing a rewrite into the vertex shader. That choice made collision detection a nightmare — collisions had to be inferred rather than checked — and locked me out of easily changing the terrain's look." },
+
+    { "type": "subheading", "text": "Fixes & Improvements" },
+    { "type": "text", "text": "For course generation, I'd move the algorithm onto a separate thread, generate much larger chunks at a time, and add backtracking when a chunk fails to produce a complete path after enough attempts. I explored noise-based approaches — the way Minecraft carves caves — but no noise type gave me what I needed, and caves eventually end where this course needs to run forever. Proper research into directional course-generation algorithms would be the starting point." },
+    { "type": "text", "text": "For the AI, I'd scrap the custom system entirely and design the boat controller to accept both AI and human input — a simple change that opens the door to an AI opponent later. I originally avoided the established Unity ML tools because their terminal-heavy setup felt too complex at the time. Before reviving this project, I'd prototype a simple ML-driven car controller separately and do the AI the industry-standard way." },
+    { "type": "text", "text": "For the terrain, I'd model it in Blender instead. The terrain was predictable and repetitive enough that modeling it would be straightforward, and it would solve two problems at once: real, editable visuals instead of shader noise, and ordinary collision detection instead of guesswork." },
+
+    { "type": "subheading", "text": "Strong Points" },
+    { "type": "text", "text": "Visually, the game looked great — the style drew from a mix of \"Poly Bridge\" and \"Home Grown\"." },
+    { "type": "text", "text": "The movement felt excellent, and the difficulty curve was well balanced. In playtesting, most people found the game legitimately hard — in the way that keeps you replaying." },
+    { "type": "text", "text": "The UI was clean and minimal, inspired by \"Sling Drift\", and it fit the game perfectly." },
+
+    { "type": "subheading", "text": "What I Learned" },
+    { "type": "text", "text": "This game taught me the value of separating systems from controllers. A simple game can get away with one script that mixes movement logic and input handling — but a game destined for AI players needs a movement system, and a separate controller that tells it what to do. I now build that separation in from the start." },
+    { "type": "text", "text": "It also taught me to reach for industry-standard solutions on hard problems. I should never have built my own ML API when proven alternatives existed, and the course generation deserved a research pass before I started writing code." },
+    { "type": "text", "text": "On the practical side, I learned how to integrate Google Play Services and set up ads." },
+
+    { "type": "subheading", "text": "Personal Reflection" },
+    { "type": "text", "text": "This was one of my favorite projects to work on. The core idea is genuinely strong — with well-implemented progression, I think this game could have done well published and marketed properly. The AI failures burned me out and I'd run dry on obstacle ideas, but the foundation is still there waiting." }
+  ]
+}

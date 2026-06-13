@@ -1,0 +1,51 @@
+{
+  "title": "Dronefall",
+  "date": "2/11/2026 - 2/28/2026",
+  "thumbnail": "Images/Blog Thumbnails/Drone Fall Thumbnail.png",
+  "description": "A roguelike with randomly generated terrain where you place drones in the water and aim them at the king's towers.",
+
+  "content": [
+    { "type": "youtube", "url": "https://youtu.be/a0Y9TZWxeqs" },
+
+    { "type": "heading", "text": "Pre Production" },
+
+    { "type": "subheading", "text": "Note" },
+    { "type": "text", "text": "Dronefall was built as a school project and was never meant to be published. It served as a testbed for creating reusable systems for my future, more complex games — a deliberate step toward being smarter about game development and building a project template with everything I normally use." },
+
+    { "type": "subheading", "text": "Description" },
+    { "type": "text", "text": "Dronefall is a roguelike with randomly generated terrain. You place drones in the water and aim them at the king's towers to take down the king, while enemy towers scattered across the island attack your drones as they approach." },
+
+    { "type": "subheading", "text": "Mechanics" },
+    { "type": "text", "text": "Middle Mouse Button: Place a drone." },
+    { "type": "text", "text": "Left Click: Adjust drone height." },
+    { "type": "text", "text": "Left Click Release: Fire the drone." },
+    { "type": "text", "text": "Right Click (while adjusting height): Cancel and return to position adjustment." },
+    { "type": "text", "text": "Right Click Hold: Pan around the island." },
+    { "type": "text", "text": "Scroll: Zoom in and out." },
+
+    { "type": "subheading", "text": "My Contribution" },
+    { "type": "text", "text": "I built this game solo. The sound effects were sourced externally, and the animations came from Mixamo." },
+
+    { "type": "heading", "text": "Post Production" },
+
+    { "type": "subheading", "text": "Game Links" },
+    { "type": "text", "text": "Play it here: [Dronefall on itch.io](https://scin.itch.io/dronefall)" },
+
+    { "type": "subheading", "text": "Problems & Failures" },
+    { "type": "text", "text": "Despite how much new ground this project covered, it ran into surprisingly few real problems. The terrain colors caused some early friction: I started with a texture and shifted UV coordinates, but that approach fought me constantly and never matched the style I wanted. Switching to vertex colors accessed through Shader Graph solved it cleanly." },
+    { "type": "text", "text": "The one genuinely hard problem was rigging. I went through every option: Mixamo's auto-rigger, manual rigging, weight painting, automatic weights — none of them held up. AccuRig technically worked, but its skeleton was far too complex, and editing the bones introduced more problems than it solved. The solution that finally stuck was MeshyAI's rigging tool. It works the same way Mixamo does — drag and drop a few key points — and because the resulting rig matches Mixamo's skeleton, the two are fully compatible." },
+
+    { "type": "subheading", "text": "Fixes & Improvements" },
+    { "type": "text", "text": "There isn't much I'd change. The audio manager could be simplified and given proper lifetime management, but that's minor. The honest critique is the game itself: the concept is cool, but it doesn't have much replayability in its current form. It was made in under two weeks, and the game was never the point — the systems were. If I revisit the concept down the line, I'd rebuild it properly and make it much better." },
+
+    { "type": "subheading", "text": "Strong Points" },
+    { "type": "text", "text": "The visuals, modeling, and music are some of the best work I've done. The UI was my first attempt at a style where a thin outline sits slightly inside the UI background — it already looks good, and it's a style I'll keep refining." },
+
+    { "type": "subheading", "text": "What I Learned" },
+    { "type": "text", "text": "This session taught me an enormous amount. One reason this game is deliberately smaller than my previous ones is that I've been learning to prevent burnout. When I get hooked on a project I'll work six to eight hours a day — roughly 100 hours over two weeks — and that pace is exactly what burns me out. This time, I took breaks on purpose." },
+    { "type": "text", "text": "I split the session between two projects: this game and a game engine, each about two weeks of work. The engine taught me a great deal about architecture, and discovering style guides solidified how I write code. The big lesson from Dronefall specifically: plan before writing. My next session starts in about a week and a half, and it's the project I intend to take to the state competition. With everything I've learned this year, I have a great feeling about it." },
+
+    { "type": "subheading", "text": "Personal Reflection" },
+    { "type": "text", "text": "This was a genuinely fun project, and it's one I'd consider returning to. The concept has real potential, and with the right design work, I think the replayability problem is solvable." }
+  ]
+}

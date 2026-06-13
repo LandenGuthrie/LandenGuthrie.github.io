@@ -1,0 +1,46 @@
+{
+  "title": "Altitude",
+  "date": "Early 2025 (one month)",
+  "thumbnail": "Images/Blog Thumbnails/Altitude Thumbnail.png",
+  "description": "A Foddian climbing game where you swing two pickaxes to scale a massive map.",
+
+  "content": [
+    { "type": "youtube", "url": "https://youtu.be/__LxVyUyMvo" },
+
+    { "type": "heading", "text": "Pre Production" },
+
+    { "type": "subheading", "text": "Note" },
+    { "type": "text", "text": "Altitude was made at the start of 2025 — I'm writing this in 2026, working from my original notes. Three people worked on it, myself included, over the span of one month." },
+
+    { "type": "subheading", "text": "Description" },
+    { "type": "text", "text": "Altitude was heavily inspired by \"A Difficult Game About Climbing\": armed with two pickaxes, you climb a large map and try to reach the top." },
+
+    { "type": "subheading", "text": "Mechanics" },
+    { "type": "text", "text": "Left Click Down: Swing the left pickaxe." },
+    { "type": "text", "text": "Right Click Down: Swing the right pickaxe." },
+    { "type": "text", "text": "Release: Lift the corresponding pickaxe back out of its swing." },
+    { "type": "text", "text": "While a mouse button is held, the pickaxe stays swung and moving the mouse swings your body from it. With neither button held, both pickaxes are up and you fall." },
+    { "type": "text", "text": "The game shipped with narration, sound effects, and complete main, settings, and pause menus. The level and win state were finished. There's no explicit lose state — falling is the lose state. It's a Foddian game." },
+	
+    { "type": "subheading", "text": "My Contribution" },
+    { "type": "text", "text": "I was the 3D modeler, level designer, scripter, and menu designer." },
+
+    { "type": "heading", "text": "Post Production" },
+
+    { "type": "subheading", "text": "Game Links" },
+    { "type": "text", "text": "Play It Here: [Altitude on itch.io](https://scin.itch.io/altitude)" },
+
+    { "type": "subheading", "text": "Problems & Failures" },
+    { "type": "text", "text": "The headline issue was the ragdoll. With a pickaxe lifted, a player with high mouse sensitivity could whip the mouse and launch themselves into the void — or, just as easily, straight to the end of the game." },
+    { "type": "text", "text": "The other honest problem: it looked rough. The character model had no texture, hair, or detail; there was no post-processing, so everything read flat and dull. I'd only been using Blender for about a year at that point. My attempt at a parallax background like the one in our inspiration didn't land, and the water was a flat plane." },
+    { "type": "text", "text": "And the game leaned too close to its inspiration — it ended up a rougher version of the original rather than its own game." },
+
+    { "type": "subheading", "text": "Fixes & Improvements" },
+    { "type": "text", "text": "Remaking this, I'd replace the ragdoll with proper IK for the arms. I tried at the time — I must have watched Pontypants' devlog twenty times — but IK was beyond me then. It isn't now. I'd keep ragdoll physics on the legs, where the looseness reads as natural rather than chaotic." },
+    { "type": "text", "text": "The visuals would get a full overhaul: volumetric fog, detailed models in place of flat colors, a proper water shader, and a real parallax background — a technique I haven't built yet, but one that's well documented and very learnable." },
+    { "type": "text", "text": "Some models also shipped without lighting — something I only noticed reviewing the project later. That gets fixed too." },
+
+    { "type": "subheading", "text": "Personal Reflection" },
+    { "type": "text", "text": "This project was a trial by fire. I took a short weekend vacation right before the deadline and came back to the worst level design I have ever seen — so I rebuilt the entire level myself. The main menu, my responsibility, hadn't been started either, which was bad planning on my part. In the final day I finished the level, the win menu, the main menu, and the missing sound effects. To this day I can't swear the level is 100% beatable — I believe it is; the only truly hard jumps are at the start where I could test thoroughly — but given that nobody is speedrunning Altitude, I've made my peace with it." }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Cart Chaos",
+  "date": "10/8/2025 - 12/11/2025",
+  "thumbnail": "Images/Blog Thumbnails/Cart Chaos.png",
+  "description": "A fast-paced speed-running game where you play as a shopping cart, complete with a full level editor.",
+
+  "content": [
+    { "type": "youtube", "url": "https://youtu.be/IPd1x4BpVfg" },
+
+    { "type": "heading", "text": "Pre Production" },
+
+    { "type": "subheading", "text": "Note" },
+    { "type": "text", "text": "Cart Chaos was a two-month project. It was officially a team of two, but the game is entirely my work." },
+
+    { "type": "subheading", "text": "Description" },
+    { "type": "text", "text": "Cart Chaos is a fast-paced speed-running game where you play as a shopping cart, building momentum by clicking or pressing W. It shipped with a full level editor: a terrain system, a rail system, a road system, and placeable objects like trees, water, and rocks." },
+
+    { "type": "subheading", "text": "Mechanics" },
+    { "type": "text", "text": "Press W or left click to push the cart; A and D to steer." },
+
+    { "type": "subheading", "text": "My Contribution" },
+    { "type": "text", "text": "I made the whole game — all of the sound design, level design, modeling, scripting, and the entire level editor." },
+
+    { "type": "heading", "text": "Post Production" },
+
+    { "type": "subheading", "text": "Game Links" },
+    { "type": "text", "text": "Play it here: [Cart Chaos on itch.io](https://scin.itch.io/cart-c)" },
+
+    { "type": "subheading", "text": "Problems & Failures" },
+    { "type": "text", "text": "The road generator consumed about a month of development and never reached the quality I wanted — and that comes down to a lack of research on my part. I wanted the road surface to stay level at both ends of every segment, but once a road climbs and turns at the same time, that constraint becomes impossible to satisfy. Studying how other games handle it later, I found they simply don't: their roads bank and curve, and as long as the tilt stays reasonable, it never affects the driving." },
+    { "type": "text", "text": "Clipping was the harder problem. A sharp enough turn would cut the road into itself, and overpasses made it worse: when two points share an x/z position at slightly different heights, at what height difference do you stop calling it a clip and start calling it an overpass? I tried an indexing approach — comparing how far apart the intersecting points are along the road, where a large gap suggests an overpass and a small one suggests a clip — but every method I tried reduced to a heuristic and a guess. In the end I shipped hard-coded thresholds and trusted editor users not to break the road. It's the one problem from this project I never cracked." },
+    { "type": "text", "text": "The road UVs were never fully solved either. The mesh generation used a greedy approach — take the two lines that define the road, walk the one with more points, and stitch each point to its nearest neighbor on the other line. It produced clean geometry, but the UVs came out inconsistent, which showed in the road texture." },
+    { "type": "text", "text": "I also wanted to support custom imported railings and models. Custom models would have been straightforward, but railings were a much deeper problem — connecting arbitrary railing segments end-to-end needs caching and matching logic I hadn't designed for. Greedy meshing, the same technique from the road generator, would likely have worked; the idea just didn't occur to me at the time." },
+    { "type": "text", "text": "On the gameplay side, small bumps were a real issue. A shopping cart is small, especially in-game, and a box collider amplifies every tiny seam in the track." },
+    { "type": "text", "text": "The biggest failure was scope. A fully fledged editor, a cosmetic system, global leaderboards for every level, persistent data storage — far too much for a one-person team." },
+
+    { "type": "subheading", "text": "Fixes & Improvements" },
+    { "type": "text", "text": "First fix: the road generator. Allowing a little rotational leeway would make the roads properly smooth. The self-intersection problem would need serious research to solve correctly — or I'd simply accept that players can break it, like other games do." },
+    { "type": "text", "text": "The UV problem deserves the same research treatment, though I suspect it largely fixes itself once the road geometry is smoother." },
+    { "type": "text", "text": "The bump problem has a clean fix: switch to a sphere collider and increase the cart's mass." },
+    { "type": "text", "text": "And on scope: I'd cut the editor entirely. It was the single biggest time sink. Gameplay, a handful of maps, data storage, and leaderboards would have made a strong beta — and the editor could come later, once the game had proven itself." },
+
+    { "type": "subheading", "text": "Strong Points" },
+    { "type": "text", "text": "Visually, the game turned out great. I aimed for a semi-realistic style and I think I nailed it. The road surface wasn't a texture at all — it was generated in a shader. Not ideal for semi-realism, but it was a placeholder that the beta would have replaced." },
+    { "type": "text", "text": "The movement was responsive and genuinely felt like driving a shopping cart, and the audio sold the speed." },
+    { "type": "text", "text": "The editor was capable of producing genuinely nice levels — the level in the gameplay video was built entirely inside it." },
+    { "type": "text", "text": "The concept held up too. It needed more identity than \"Trackmania with shopping carts,\" but the foundation was fun." },
+
+    { "type": "subheading", "text": "What I Learned" },
+    { "type": "text", "text": "This project taught me why you don't scope big. The original MVP — drive a cart down an infinitely generating road and catch falling groceries — wasn't the most exciting idea, but its scope was exactly right. That contrast stuck with me." },
+
+    { "type": "subheading", "text": "Personal Reflection" },
+    { "type": "text", "text": "The game came out polished and well-made. When I presented it to my game design class, the feedback was strongly positive — people genuinely enjoyed playing it. With a smaller scope, I believe I'd still be working on it today. What ended the project wasn't the game; it was the burnout of pushing a one-person team through a five-person scope." }
+  ]
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <script>document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light';</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="post">
+
+  <header id="topbar">
+    <nav>
+      <a href="index.html#hero">Home</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+      <a class="blogs-btn" href="blogs.html">Blogs</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Switch between light and dark mode">
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5" fill="currentColor" stroke="none"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+      <svg class="moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 13.2A9 9 0 1 1 10.8 3a7.2 7.2 0 0 0 10.2 10.2z"/></svg>
+    </button>
+  </header>
+
+  <main class="page">
+    <article id="post"></article>
+  </main>
+
+  <script src="js/site.js"></script>
+</body>
+</html>

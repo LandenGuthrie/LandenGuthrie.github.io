@@ -1,0 +1,32 @@
+{
+  "title": "Big Tag",
+  "date": "2024",
+  "thumbnail": "Images/Blog Thumbnails/Big Tag Thumbnail.png",
+  "description": "A two-player tag game with multiple levels, where a big elephant chases a small elephant before the timer runs out.",
+
+  "content": [
+    { "type": "youtube", "url": "https://youtu.be/7sfyho9K0v4" },
+
+    { "type": "heading", "text": "Big Tag" },
+
+    { "type": "subheading", "text": "Summary" },
+    { "type": "text", "text": "Big Tag was a school project from 2024, built by a team of four. I'm writing this in 2026 — the initial commit is fourteen months old as of today — so the details come from memory and the repository." },
+    { "type": "text", "text": "Big Tag is a two-player tag game: one player is the big elephant, the other is the small elephant. The big elephant has to tag the small one before the timer runs out — survive the clock, and the small elephant wins." },
+
+    { "type": "subheading", "text": "What I Built" },
+    { "type": "text", "text": "Whatever the credits say, I fully built the tag system, the water system, the main menu, and all five of the maps." },
+    { "type": "text", "text": "The video shows only two of the five maps — the final version of the game was never pushed to the repository, and it's gone for good. A lesson about version control I only needed to learn once." },
+
+    { "type": "subheading", "text": "Problems & Failures" },
+    { "type": "text", "text": "The main problem was physics. I had only just started using Unity and didn't yet understand its physics systems, which produced sluggish, unresponsive movement. I worked it into a decent state by the end, but players could still stick to walls." },
+    { "type": "text", "text": "The water system was the other weak point: it ran entirely on the main thread and was slow — the landing ripples were the most expensive part, even if they did look the part." },
+
+    { "type": "subheading", "text": "Fixes & Improvements" },
+    { "type": "text", "text": "Revisiting this concept, I'd fix the physics properly: physics materials for the wall-sticking, and movement logic moved into FixedUpdate where it belongs." },
+    { "type": "text", "text": "I'd move the water simulation onto the GPU in a shader, and give it a real visual upgrade while I'm there." },
+    { "type": "text", "text": "The post-processing also needed restraint — most notably on the space map, where excessive bloom produced what looked like flashes of light. You can see it in the video if you know to look." },
+
+    { "type": "subheading", "text": "What I Learned" },
+    { "type": "text", "text": "Two years out, the throughline is clear: this project is where I learned to find my way around Unity's physics systems. Every physics decision I've made since — including the choice to write custom physics where Unity's falls short — traces back to the walls I hit here." }
+  ]
+}

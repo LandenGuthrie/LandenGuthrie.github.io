@@ -1,0 +1,58 @@
+{
+  "title": "Masked (State Competition)",
+  "date": "3/19/2025 - 5/9/2025",
+  "thumbnail": "Images/Blog Thumbnails/Masked Thumbnail.png",
+  "description": "A horror delivery game made for the \"The Masks We Wear\" game jam — taken all the way to the state competition.",
+
+  "content": [
+    { "type": "youtube", "url": "https://youtu.be/Yw4TYLhiiBM" },
+
+    { "type": "heading", "text": "Pre Production" },
+
+    { "type": "subheading", "text": "Note" },
+    { "type": "text", "text": "Masked was made at the start of 2025 — I'm writing this in 2026, working from my original blog for the project, so some details come secondhand from past me. Three people worked on it, myself included, over a span of two months." },
+    { "type": "text", "text": "This was one of my few game jam entries. The prompt was \"The Masks We Wear\" — not a prompt I'd have chosen, but a constraint is a constraint." },
+
+    { "type": "subheading", "text": "Description" },
+    { "type": "text", "text": "Heavily inspired by \"Order 13\", Masked drops you into a warehouse full of monsters. You deliver packages to meet a daily quota, manage an oxygen tank to stay conscious, and survive until the final day — when a secret door opens and you can escape." },
+
+    { "type": "subheading", "text": "Mechanics" },
+    { "type": "text", "text": "Interaction System: A simple grab system — packages float in front of the camera while carried, and oxygen tanks refill your oxygen bar." },
+    { "type": "text", "text": "Package Delivery System: A screen displays a color and a package number. You find the floor matching that color, search the section for the package, carry it back to the conveyor belt, and move on to the next — all without being caught." },
+    { "type": "text", "text": "Movement: Standard WASD with sprint, governed by a stamina bar. The game had full controller support, built manually on Unity's old input system." },
+
+    { "type": "subheading", "text": "My Contribution" },
+    { "type": "text", "text": "I did the level design, all of the scripting, all of the 3D modeling, the sound design, the menus, and the animations." },
+
+    { "type": "heading", "text": "Post Production" },
+
+    { "type": "subheading", "text": "Game Links" },
+    { "type": "text", "text": "Play it here: [Masked on itch.io](https://scin.itch.io/masked)" },
+
+    { "type": "subheading", "text": "Problems & Failures" },
+    { "type": "text", "text": "The feedback surfaced real issues: the floor colors were hard to read, which made packages hard to locate; the level felt repetitive; and it didn't read as a warehouse. The footstep audio also turned out to sound… not the way I intended — my game design class made sure I knew. Feedback is feedback. The level was deliberately designed as a maze, and finding packages was supposed to be hard — but I clearly didn't communicate that intent, because the professionals' verdict was simply \"confusing.\"" },
+    { "type": "text", "text": "The settings menu included an option to shorten the game for people without much time — which says a lot on its own. The game ran too long and leaned too repetitive, and the fun wore off well before the ending did." },
+    { "type": "text", "text": "A bigger technical issue: the movement was physics-based, so at low frame rates the player moved dramatically slower. This became real at the A.M.E.S. competition, where the facility's computer couldn't keep up. We had a backup plan and two hours to prepare, so we presented with a pre-recorded video instead — and that experience changed how I present permanently. To this day I always show my games on video, never live." },
+    { "type": "text", "text": "We placed around fourth at state. The main judging criterion was how well the game fit the prompt, and ours didn't lean into it hard enough — even though you literally wear a mask and your survival depends on oxygen. The game was also initially rejected from A.M.E.S. on suspicion of stolen assets. They gave no specifics, and once the sting wore off, I chose to take it as a compliment: they didn't believe people our age could produce work at that level. I appealed, and the game was reinstated." },
+
+    { "type": "subheading", "text": "Fixes & Improvements" },
+    { "type": "text", "text": "Returning to this game, I'd dial back the film grain — which was actually fake grain produced through the volumetric fog — and make the player's immediate surroundings more visible and colorful while keeping the mid-distance dark to preserve the dread. I'd fix the footstep audio. And for the \"confusing\" maze, I'd put a map of the full layout on a chalkboard in the level — enough to signal that the maze is intentional." },
+    { "type": "text", "text": "To fix the pacing, the levers are walking speed, sprint speed, stamina, and map size — and the game needed a nudge on all of them. The base walk was too slow, stamina too scarce, and the map a touch too large; trimming one section would bring the scale in line." },
+    { "type": "text", "text": "I'd also move the movement out of the physics step entirely. There was no real reason for physics-based movement here — player collisions, maybe, and those are a simple fix." },
+    { "type": "text", "text": "More fundamentally, I'd push the concept further from its inspiration. This game was a lesser version of \"Order 13\", and that's the pattern I most want to break — finding the twist that makes the game mine, and weaving it into the prompt." },
+    { "type": "text", "text": "The UI was solid, but players kept forgetting their current package. The package IDs were fully random with no pattern for the player to hold onto, so I'd index every package instead — easier to find, easier to remember — or lean the other way and make remembering part of the challenge. Either is better than random." },
+
+    { "type": "subheading", "text": "Strong Points" },
+    { "type": "text", "text": "The lighting carried the game. We used simple textures and simple geometry, and the lighting hid all of it while nailing the atmosphere I was after." },
+    { "type": "text", "text": "The sound design earned compliments from the professionals at the competition. A few effects ran low-quality — and yes, the footsteps — but as a whole it was a genuine strength." },
+    { "type": "text", "text": "On capable hardware, the movement and interaction systems felt great to use." },
+    { "type": "text", "text": "The models and animations turned out very well. This was one of my first times sculpting in Blender and rigging characters myself; the sculpts held up better than the rigs, and the lighting covered the difference." },
+    { "type": "text", "text": "The UI was clean, minimal, and coherent — exactly what the game needed." },
+
+    { "type": "subheading", "text": "What I Learned" },
+    { "type": "text", "text": "A year on, the specifics have faded, but the competition lesson is permanent: lean hard into the prompt. Judges score against the brief, not against ambition — creativity has to serve the prompt, not compete with it." },
+
+    { "type": "subheading", "text": "Personal Reflection" },
+    { "type": "text", "text": "I'm at peace with this one. It turned out well despite its flaws, and I think it deserved a better result at state than it got. My real reservation isn't the placement — it's that the game wasn't original enough, and not as fun as it should have been. Both of those are fixable, and both shaped what I built next." }
+  ]
+}

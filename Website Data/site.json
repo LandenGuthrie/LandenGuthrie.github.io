@@ -1,0 +1,40 @@
+{
+  "siteTitle": "Landens Portfolio",
+  "name": "Landen Guthrie",
+  "tagline": "Three Time Game Design State Finalist.",
+  "email": "landenguth08@gmail.com",
+
+  "heroVideo": "https://youtu.be/CbNrWUiBMt4",
+  "heroOverlay": "rgba(0, 0, 0, 0.35)",
+  "heroTitleColor": "#ffffff",
+  "heroTaglineColor": "rgba(255, 255, 255, 0.85)",
+  "heroScrollColor": "#ffffff",
+
+  "featuredBlogs": [
+    "cart-chaos",
+    "tide-drift",
+    "masked"
+  ],
+
+  "about": {
+    "image": "Images/Head Shot.png",
+    "text": "Hey, I'm Landen Guthrie, a 17-year-old junior in high school and a game developer with six years of experience building games from the ground up.\n\nI work primarily in Unity, with a clear and well-developed understanding of the engine. I mainly specialize in scripting with C# and 3D modeling in Blender, and I also dabble in sound design and low-level scripting. I'm comfortable with version control too, using both GitHub Desktop and Git through the command line. That combination lets me take a project from a raw idea all the way to a finished, playable build. Over the years I've built everything from Foddian climbing games to mobile speedboat racers to tower defense games, and I'm not afraid to roll my own tech when I need to, from custom physics to IK systems.\n\nI've competed at the state level three times through A.M.E.S., and those competitions have taught me as much about presenting and refining my work as they have about building it. Every project pushes me to sharpen my craft and make the next one look and feel better than the last. This website has my entire game design journey. Take a look around!"
+  },
+
+  "links": [
+    { "label": "Email Me", "url": "mailto:landenguth08@gmail.com" },
+    { "label": "Itch.io", "url": "https://scin.itch.io" },
+    { "label": "YouTube", "url": "https://www.youtube.com/@Scinted" }
+  ],
+
+  "blogsFallbackList": [
+    "dronefall",
+    "top-heavy",
+    "cart-chaos",
+    "tide-drift",
+    "masked",
+    "altitude",
+    "pathway",
+    "big-tag"
+  ]
+}

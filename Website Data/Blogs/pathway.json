@@ -1,0 +1,43 @@
+{
+  "title": "Pathway",
+  "date": "6/5/2024 - 6/10/2024",
+  "thumbnail": "Images/Blog Thumbnails/Pathway Thumbnail.png",
+  "description": "A tower defense game made in 5 days, where the enemy path randomly regenerates every single round.",
+
+  "content": [
+    { "type": "image", "src": "Images/Blog Thumbnails/Pathway Thumbnail.png", "caption": "Pathway gameplay." },
+
+    { "type": "heading", "text": "Pre Production" },
+
+    { "type": "subheading", "text": "Description" },
+    { "type": "text", "text": "Pathway was a school project from 2024, built in just five days to demonstrate what I'd learned that year. I'm writing this in 2026 with no original notes, so the details come from memory and from replaying the game." },
+    { "type": "text", "text": "Pathway is a tower defense game with a twist: the enemy path randomly regenerates every single round. Killing an enemy has a chance to drop one of four items. Path tiles expand your buildable area; cannons fire at nearby enemies with a fire rate that adapts each round; boosters strengthen adjacent cannons; and telephone poles strike enemies with lightning, killing in one shot." },
+
+    { "type": "subheading", "text": "My Contribution" },
+    { "type": "text", "text": "I made the entire game: the sound effects, the models, the UI — main menu, placement menu, timer, wave counter — and all of the code." },
+
+    { "type": "heading", "text": "Post Production" },
+
+    { "type": "subheading", "text": "Game Links" },
+    { "type": "text", "text": "Play it here: [Pathway on itch.io](https://scin.itch.io/pathway)" },
+
+    { "type": "subheading", "text": "Problems & Failures" },
+    { "type": "text", "text": "The game had its share of bugs — which is what you'd expect from a developer with ten months of Unity experience shipping a game in five days." },
+    { "type": "text", "text": "The biggest one: cannons would occasionally stop firing with enemies in range. It wasn't constant — you could play a full game without seeing it — but it was there." },
+    { "type": "text", "text": "A subtler bug that no player ever discovered: while holding a booster, hovering over a tile would boost cannons that weren't actually adjacent to it." },
+    { "type": "text", "text": "The telephone pole sometimes simply refused to fire. Watching the console during play, you'd see a steady stream of \"Object reference not set to an instance of an object\" errors — almost certainly the poles." },
+    { "type": "text", "text": "Replaying the game recently, I found one more: hovering over an empty tile with a cannon selected made the phantom cannon fire at nearby enemies — damage from a tower that visually didn't exist." },
+
+    { "type": "subheading", "text": "Fixes & Improvements" },
+    { "type": "text", "text": "If I remade Pathway today, the current version would take me about a day. With five days I could do it properly: fix the cannon, booster, and telephone pole bugs, and build real difficulty progression. As shipped, your items were overpowered early, and around wave five the enemies overpowered you — I reached wave eleven exactly once, on pure luck." },
+    { "type": "text", "text": "The pathfinding deserves a rebuild too. It was an attempt at A*, and it had flaws: collect enough path pieces and you could break the game outright, and with many tiles placed it would sometimes fail to find a path at all — giving up after fifty attempts." },
+    { "type": "text", "text": "Visually, the game was serviceable but unfocused. The models were a little odd, there was no post-processing, and while I'm still proud of the custom shader driving the animated wave background, the waves had no lighting. A remake would commit to a coherent theme — the original felt disjointed and, without post-processing, dull." },
+    { "type": "text", "text": "The music was a roughly fifteen-second loop, and it wore out its welcome fast. The sound effects were solid but repetitive; randomizing pitch and volume per play is the standard fix, and it's the one I'd apply." },
+
+    { "type": "subheading", "text": "What I Learned" },
+    { "type": "text", "text": "Two years on, the clearest lesson is what the project proved: I could ship a complete game in a very short window. This was also around the time I was first learning Blender, and Pathway put those early modeling skills to work." },
+
+    { "type": "subheading", "text": "Personal Reflection" },
+    { "type": "text", "text": "I consider this one of the better games I've made — not for its models, sound, or bug count, but for its design. Tower defense plus RNG made a simple, genuinely replayable game. My recent projects have suffered from oversized scopes that drain my interest; Pathway never had that problem. Sometimes two well-chosen ideas are enough." }
+  ]
+}

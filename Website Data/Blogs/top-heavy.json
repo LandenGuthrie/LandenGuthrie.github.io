@@ -1,0 +1,47 @@
+{
+  "title": "Top Heavy",
+  "date": "12/16/2025 - 1/9/2026",
+  "thumbnail": "Images/Blog Thumbnails/Top Heavy Thumbnail.png",
+  "description": "A Foddian game about delivering packages in a warehouse while in a constant handstand.",
+
+  "content": [
+    { "type": "youtube", "url": "https://youtu.be/spKiG0XK5vg" },
+
+    { "type": "heading", "text": "Pre Production" },
+
+    { "type": "subheading", "text": "Note" },
+    { "type": "text", "text": "Top Heavy is an unfinished game that's no longer in production. It was officially a two-person project, but in practice I did all of the work." },
+
+    { "type": "subheading", "text": "Description" },
+    { "type": "text", "text": "Top Heavy is a Foddian game where you've been hired at a warehouse to deliver packages — with one odd company rule: you carry them on your feet while in a constant handstand. Your instructor is secretly a Russian spy investigating the company's strange behavior." },
+
+    { "type": "subheading", "text": "Mechanics" },
+    { "type": "text", "text": "The left and right mouse buttons lift the corresponding hand." },
+    { "type": "text", "text": "Move the mouse to position the lifted hand." },
+    { "type": "text", "text": "Click and hold both buttons at the same time to jump." },
+
+    { "type": "subheading", "text": "My Contribution" },
+    { "type": "text", "text": "I did all of the scripting, level design, custom physics, modeling, character controller, and sound design." },
+
+    { "type": "heading", "text": "Post Production" },
+
+    { "type": "subheading", "text": "Problems & Failures" },
+    { "type": "text", "text": "This game had one problem, but it was fundamental: the character controller. It accumulated so many edge cases that it became genuinely painful to work on. I tried taming the complexity with a Unity-style ECS approach — and if you know Unity's ECS, you know it isn't really an ECS (their DOTS system is the real one). After days of work with little progress, the controller was still fighting me, and that's ultimately what stalled the project." },
+
+    { "type": "subheading", "text": "Fixes & Improvements" },
+    { "type": "text", "text": "The root issue was that the character controller lacked proper state management. If I ever come back to this idea, that's the first thing I'd build correctly — a clean state machine would have eliminated most of those edge cases up front." },
+
+    { "type": "subheading", "text": "Strong Points" },
+    { "type": "text", "text": "The game used a custom IK system. Despite what I've written in previous blogs about using what's already available, I wrote my own here for a good reason: Unity's animation rigging package would intermittently stop updating with no clear cause. Rather than fight an opaque system, I built one I could trust." },
+    { "type": "text", "text": "The character model was a standout — it looked genuinely good, especially for a project that barely reached MVP." },
+    { "type": "text", "text": "The box physics held up well. In hindsight I'd have run it in the Update loop, since there was some visual desync between the boxes and the player — more noticeable on lower-end devices — but visually the boxes looked good and tracked the player correctly." },
+    { "type": "text", "text": "I also implemented custom physics. It was simple to build, but it bit back later: when you jumped onto a platform, the platform reacted with a force of its own, creating yet more edge cases for the controller. I'm usually against writing custom physics, but even looking back, it seems like the only viable option here — Unity's built-in physics simply wasn't up to the job, and don't get me started on its shadow cascade system, which is as unreliable as it is unpredictable." },
+
+    { "type": "subheading", "text": "What I Learned" },
+    { "type": "text", "text": "I learned how to properly handle IK. That said, it would be worth understanding why Unity's animation rigging package fails the way it does — I'd still rather use a maintained system than my own when it works." },
+    { "type": "text", "text": "Level design has never been my strength, but this project taught me gray boxing — the industry-standard method of blocking out a level with simple geometry to nail the feel before making it look good. You can see it in the gameplay video. The project ended before I reached the polish stage, but the technique is now part of my toolkit." },
+
+    { "type": "subheading", "text": "Personal Reflection" },
+    { "type": "text", "text": "The idea was solid, but I'm not convinced the final game would have been fun. Mid-project I realized I wanted to make something faster-paced, and nothing fast pairs naturally with handstands — at least not without rewriting the entire character controller. Looking back, skateboarding would have been a great pivot: a faster game, and with the character locked to the board, no IK controller needed at all." }
+  ]
+}

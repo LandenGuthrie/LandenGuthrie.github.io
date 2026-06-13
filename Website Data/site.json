@@ -24,7 +24,8 @@
   "links": [
     { "label": "Email Me", "url": "mailto:landenguth08@gmail.com" },
     { "label": "Itch.io", "url": "https://scin.itch.io" },
-    { "label": "YouTube", "url": "https://www.youtube.com/@Scinted" }
+    { "label": "YouTube", "url": "https://www.youtube.com/@Scinted" },
+    { "label": "Linkedin", "url": "https://www.linkedin.com/in/landen-guthrie-a72085349/" }
   ],
 
   "blogsFallbackList": [

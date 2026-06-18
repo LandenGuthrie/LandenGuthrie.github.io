@@ -188,14 +188,32 @@ function initSlider() {
     if (['ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); step(-1); }
   });
 
-  // touch swipe
+  // touch swipe — mirrors the wheel logic: if the section can still scroll
+  // internally in the swipe direction, let it scroll instead of sliding
   let touchY = null;
-  window.addEventListener('touchstart', (e) => { touchY = e.touches[0].clientY; }, { passive: true });
+  let touchScroller = null;
+  let touchAtTop = true, touchAtBottom = true;
+  window.addEventListener('touchstart', (e) => {
+    touchY = e.touches[0].clientY;
+    const sec = sections[index];
+    const scroller = sec.querySelector('.section-scroll') || sec;
+    touchScroller = (sec.id !== 'hero' && scroller.scrollHeight > scroller.clientHeight + 24) ? scroller : null;
+    if (touchScroller) {
+      touchAtTop = scroller.scrollTop <= 0;
+      touchAtBottom = scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 1;
+    }
+  }, { passive: true });
   window.addEventListener('touchend', (e) => {
     if (touchY === null) return;
     const dy = touchY - e.changedTouches[0].clientY;
-    if (Math.abs(dy) > 50) step(dy > 0 ? 1 : -1);
     touchY = null;
+    if (Math.abs(dy) <= 50) return;
+    // started mid-scroll → that swipe was meant to scroll the cards, not slide
+    if (touchScroller) {
+      if (dy > 0 && !touchAtBottom) return;
+      if (dy < 0 && !touchAtTop) return;
+    }
+    step(dy > 0 ? 1 : -1);
   }, { passive: true });
 
   // links like #projects (top bar, About Me button) slide instead of jumping
@@ -274,7 +292,7 @@ async function initHome() {
   if (site.heroScrollColor) document.querySelector('#hero .scroll-hint').style.color = site.heroScrollColor;
 
   // top three featured projects
-  const featured = (site.featuredBlogs || []).slice(0, 3);
+  const featured = site.featuredBlogs || [];
   const cards = await Promise.all(featured.map(async name => {
     try { return blogCard(name, await getBlog(name)); }
     catch { return `<div class="error-msg">Couldn't load "${escapeHtml(name)}.json"</div>`; }

@@ -11,6 +11,7 @@
   "heroScrollColor": "#ffffff",
 
   "featuredBlogs": [
+    "wilco",
     "cart-chaos",
     "tide-drift",
     "masked"
@@ -29,6 +30,7 @@
   ],
 
   "blogsFallbackList": [
+    "wilco",
     "dronefall",
     "top-heavy",
     "cart-chaos",

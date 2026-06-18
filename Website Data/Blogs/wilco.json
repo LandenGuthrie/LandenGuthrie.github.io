@@ -1,0 +1,52 @@
+{
+  "title": "Wilco",
+  "date": "3/12/2026 - 5/8/2026",
+  "thumbnail": "Images/Blog Thumbnails/Wilco Thumbnail.png",
+  "description": "A single-player arcade jet racing game — tear through procedurally generated terrain against AI opponents across Race and Chase modes.",
+
+  "content": [
+    { "type": "youtube", "url": "https://youtu.be/pZUWcGjpIOw" },
+
+    { "type": "heading", "text": "Pre Production" },
+
+    { "type": "subheading", "text": "Note" },
+    { "type": "text", "text": "Wilco was built for the A.M.E.S. state competition — the third time I've qualified." },
+
+    { "type": "subheading", "text": "Description" },
+    { "type": "text", "text": "Wilco is a single-player arcade jet racing game where you tear through procedurally generated terrain at high speed against AI opponents. Every course is built from winding, procedurally generated paths, so each run feels like fresh airspace. The game has two modes: Race Mode, where you go wing-to-wing with a rival jet along a marked course, and Chase Mode, where the goal flips — you fight to stay alive while multiple enemy aircraft hunt you down." },
+
+    { "type": "subheading", "text": "Mechanics" },
+    { "type": "text", "text": "Throttle up and down." },
+    { "type": "text", "text": "Roll left and right." },
+    { "type": "text", "text": "Yaw side to side." },
+    { "type": "text", "text": "Pitch up and down." },
+    { "type": "text", "text": "Every control is fully customizable, with full controller support." },
+
+    { "type": "subheading", "text": "My Contribution" },
+    { "type": "text", "text": "I was the scripter, 3D modeler, and UI designer, and I contributed some of the sound." },
+
+    { "type": "heading", "text": "Post Production" },
+
+    { "type": "subheading", "text": "Game Links" },
+    { "type": "text", "text": "Play it here: [Wilco on itch.io](https://scin.itch.io/wilco)" },
+
+    { "type": "subheading", "text": "Problems & Failures" },
+    { "type": "text", "text": "Wilco moved through development with remarkably few issues. The main one was the jet movement — it needed a lot of refinement and never quite reached the realistic feel I was after. I tried selling speed through the camera: shifting the FOV, adding camera shake, rolling the camera with your turns, and layering in sound effects meant to convey velocity. It all helped, but it never felt completely right. Most of the movement ran on custom physics, which took heavy refinement and still landed short of where I wanted it." },
+    { "type": "text", "text": "The biggest technical challenge was the path generation. I went through several algorithms trying to make the course windy and genuinely random. I don't remember the name of the one I finally used, but after a lot of digging I found an algorithm that looked perfect, recreated it, and it worked extremely well." },
+    { "type": "text", "text": "The AI jets had their own problems. I gave them a minimum speed so they wouldn't crawl through turns, but because the AI read a normalized speed value, that minimum registered as no speed at all — which made them noticeably worse rather than better. In hindsight it would have been a simple fix. I ended up setting the minimum speed to zero, which cleared up every problem, and the slowdown I'd been worried about turned out not to matter much." },
+
+    { "type": "subheading", "text": "Fixes & Improvements" },
+    { "type": "text", "text": "The main improvement would be switching the terrain to a marching cubes algorithm. That would open up tunnels to fly through and pillars to dodge in the middle of the path — far more interesting procedural terrain. I went with Unity's terrain system instead, mainly for its splat-map painting, and for a project that only took about two months, marching cubes would have been too much work. But it's the first thing I'd reach for in a larger version of the game." },
+
+    { "type": "subheading", "text": "Strong Points" },
+    { "type": "text", "text": "The controls feel great. The game is easy to pick up and just play, while still leaving a real skill gap for players to master and race each other." },
+    { "type": "text", "text": "It's packed with features — custom map styles, fully custom keybinds, and a wide range of settings for changing how the game looks." },
+    { "type": "text", "text": "The art style is clean and cohesive. The textures work together well, and the terrain came out looking exactly like what I'd pictured." },
+    { "type": "text", "text": "The jet model went through about four variations before I settled on the final one. It has a few cosmetic flaws, but it reads convincingly like the real thing." },
+    { "type": "text", "text": "Race Mode is the standout. Chase Mode was harder to balance — it tended to land either too easy or too difficult." },
+    { "type": "text", "text": "The UI is some of my best interface work, and building it taught me a lot about Unity's UI system that I hadn't known before." },
+
+    { "type": "subheading", "text": "Personal Reflection" },
+    { "type": "text", "text": "Wilco is, without question, the best game I've made. Part of that is simply that I finished it — carrying a game all the way to completion is rare for me. But it's also the quality: the feel, the simplicity, the depth of features, and the polish all came together in a way my earlier projects never quite did. It's the game that earned my third trip to the state competition, and it's the one I'm proudest to show." }
+  ]
+}
